@@ -34,7 +34,7 @@ img{max-width:100%;display:block}
 .navbar.scrolled{background:rgba(10,10,10,0.97);box-shadow:0 2px 20px rgba(0,0,0,0.5);backdrop-filter:blur(10px)}
 .navbar .container{display:flex;align-items:center;justify-content:space-between}
 .navbar-brand{font-family:var(--font-display);font-style:italic;font-size:1.8rem;font-weight:700;color:var(--gold);letter-spacing:2px}
-.navbar-toggle{display:none;background:none;border:none;cursor:pointer;padding:0.5rem}
+.navbar-toggle{display:none;background:none;border:none;cursor:pointer;padding:0.5rem;position:relative;z-index:1100}
 .navbar-toggle span{display:block;width:28px;height:2px;background:var(--gold);margin:6px 0;transition:var(--transition);border-radius:2px}
 .navbar-toggle.active span:nth-child(1){transform:rotate(45deg) translate(5px,6px)}
 .navbar-toggle.active span:nth-child(2){opacity:0}
@@ -44,9 +44,11 @@ img{max-width:100%;display:block}
 .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gold);transition:width var(--transition)}
 .nav-links a:hover{color:var(--gold)}
 .nav-links a:hover::after{width:100%}
+.nav-backdrop{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:1001;backdrop-filter:blur(2px)}
+.nav-backdrop.open{display:block}
 @media(max-width:768px){
   .navbar-toggle{display:block}
-  .nav-links{position:fixed;top:0;right:-100%;width:75%;max-width:320px;height:100vh;background:var(--dark);flex-direction:column;justify-content:center;align-items:center;gap:2rem;transition:right var(--transition);box-shadow:-5px 0 30px rgba(0,0,0,0.5)}
+  .nav-links{position:fixed;top:0;right:-100%;width:75%;max-width:320px;height:100vh;background:var(--dark);flex-direction:column;justify-content:center;align-items:center;gap:2rem;transition:right var(--transition);box-shadow:-5px 0 30px rgba(0,0,0,0.5);z-index:1050}
   .nav-links.open{right:0}
   .nav-links a{font-size:1.1rem}
 }
@@ -257,6 +259,7 @@ img{max-width:100%;display:block}
     </ul>
   </div>
 </nav>
+<div class="nav-backdrop" id="navBackdrop"></div>
 
 <!-- =================== HERO =================== -->
 <section class="hero" id="hero">
@@ -707,23 +710,34 @@ img{max-width:100%;display:block}
   const navbar=document.getElementById('navbar');
   const navToggle=document.getElementById('navToggle');
   const navLinks=document.getElementById('navLinks');
+  const navBackdrop=document.getElementById('navBackdrop');
+
+  function closeMenu(){
+    navLinks.classList.remove('open');
+    navToggle.classList.remove('active');
+    navBackdrop.classList.remove('open');
+    navToggle.setAttribute('aria-expanded','false');
+  }
+
+  function openMenu(){
+    navLinks.classList.add('open');
+    navToggle.classList.add('active');
+    navBackdrop.classList.add('open');
+    navToggle.setAttribute('aria-expanded','true');
+  }
 
   window.addEventListener('scroll',function(){
     navbar.classList.toggle('scrolled',window.scrollY>50);
   },{passive:true});
 
   navToggle.addEventListener('click',function(){
-    navLinks.classList.toggle('open');
-    navToggle.classList.toggle('active');
-    navToggle.setAttribute('aria-expanded',navLinks.classList.contains('open'));
+    if(navLinks.classList.contains('open')){closeMenu();}else{openMenu();}
   });
 
+  navBackdrop.addEventListener('click',closeMenu);
+
   navLinks.querySelectorAll('a').forEach(function(link){
-    link.addEventListener('click',function(){
-      navLinks.classList.remove('open');
-      navToggle.classList.remove('active');
-      navToggle.setAttribute('aria-expanded','false');
-    });
+    link.addEventListener('click',closeMenu);
   });
 })();
 
