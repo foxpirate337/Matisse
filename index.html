@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Matisse — Ristorante · Pizzeria · Bar · Disco Club | Genzano di Lucania</title>
+<meta name="description" content="Matisse: ristorante, pizzeria, bar e disco club a Genzano di Lucania (PZ). Cucina italiana autentica, pizza artigianale, musica dal vivo. Prenota ora: 392 501 8982.">
+<meta name="keywords" content="ristorante Genzano di Lucania, pizzeria Genzano, Matisse ristorante, cucina italiana Basilicata, pizza artigianale, disco club Genzano">
+<meta name="author" content="Matisse Ristorante Pizzeria">
+<meta property="og:title" content="Matisse — Ristorante · Pizzeria · Bar · Disco Club">
+<meta property="og:description" content="Cucina italiana autentica e pizza artigianale a Genzano di Lucania. Prenota il tuo tavolo oggi!">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://matisseristorantepizzeria.it">
+<meta property="og:locale" content="it_IT">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Matisse — Ristorante · Pizzeria · Bar">
+<meta name="twitter:description" content="Cucina italiana autentica e pizza artigianale a Genzano di Lucania (PZ).">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--black:#0a0a0a;--dark:#111;--dark-card:#161616;--gold:#c9a84c;--gold-light:#e0c97a;--gold-dark:#a8893a;--white:#f5f5f0;--white-dim:#bbb;--font-display:'Playfair Display',Georgia,'Times New Roman',serif;--font-body:'Lato','Helvetica Neue',Arial,sans-serif;--section-padding:6rem 1.5rem;--max-width:1200px;--radius:12px;--transition:0.3s ease}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--font-body);background:var(--black);color:var(--white);line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4,h5{font-family:var(--font-display);font-weight:700;line-height:1.2}
+a{color:var(--gold);text-decoration:none;transition:color var(--transition)}
+a:hover{color:var(--gold-light)}
+img{max-width:100%;display:block}
+.container{max-width:var(--max-width);margin:0 auto;padding:0 1.5rem}
+
+/* =================== NAVBAR =================== */
+.navbar{position:fixed;top:0;left:0;width:100%;z-index:1000;padding:1rem 0;transition:background var(--transition),box-shadow var(--transition)}
+.navbar.scrolled{background:rgba(10,10,10,0.97);box-shadow:0 2px 20px rgba(0,0,0,0.5);backdrop-filter:blur(10px)}
+.navbar .container{display:flex;align-items:center;justify-content:space-between}
+.navbar-brand{font-family:var(--font-display);font-style:italic;font-size:1.8rem;font-weight:700;color:var(--gold);letter-spacing:2px}
+.navbar-toggle{display:none;background:none;border:none;cursor:pointer;padding:0.5rem}
+.navbar-toggle span{display:block;width:28px;height:2px;background:var(--gold);margin:6px 0;transition:var(--transition);border-radius:2px}
+.navbar-toggle.active span:nth-child(1){transform:rotate(45deg) translate(5px,6px)}
+.navbar-toggle.active span:nth-child(2){opacity:0}
+.navbar-toggle.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-6px)}
+.nav-links{display:flex;gap:2rem;list-style:none;align-items:center}
+.nav-links a{color:var(--white);font-size:0.9rem;font-weight:400;letter-spacing:1px;text-transform:uppercase;position:relative;padding:0.3rem 0}
+.nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gold);transition:width var(--transition)}
+.nav-links a:hover{color:var(--gold)}
+.nav-links a:hover::after{width:100%}
+@media(max-width:768px){
+  .navbar-toggle{display:block}
+  .nav-links{position:fixed;top:0;right:-100%;width:75%;max-width:320px;height:100vh;background:var(--dark);flex-direction:column;justify-content:center;align-items:center;gap:2rem;transition:right var(--transition);box-shadow:-5px 0 30px rgba(0,0,0,0.5)}
+  .nav-links.open{right:0}
+  .nav-links a{font-size:1.1rem}
+}
+
+/* =================== HERO =================== */
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden;background:linear-gradient(135deg,#0a0a0a 0%,#1a1a1a 50%,#0a0a0a 100%)}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 40%,rgba(201,168,76,0.08) 0%,transparent 60%)}
+.hero-pattern{position:absolute;inset:0;opacity:0.03;background-image:repeating-linear-gradient(0deg,transparent,transparent 50px,rgba(201,168,76,0.3) 50px,rgba(201,168,76,0.3) 51px),repeating-linear-gradient(90deg,transparent,transparent 50px,rgba(201,168,76,0.3) 50px,rgba(201,168,76,0.3) 51px)}
+.hero-content{position:relative;z-index:2;padding:2rem}
+.hero-cocktail{font-size:3rem;margin-bottom:1rem;filter:drop-shadow(0 0 20px rgba(201,168,76,0.3))}
+.hero h1{font-family:var(--font-display);font-style:italic;font-size:clamp(3.5rem,8vw,7rem);color:var(--gold);letter-spacing:6px;margin-bottom:0.5rem;text-shadow:0 0 40px rgba(201,168,76,0.2)}
+.hero-subtitle{font-size:clamp(0.85rem,2vw,1.1rem);color:var(--white-dim);letter-spacing:4px;text-transform:uppercase;margin-bottom:0.8rem;font-weight:300}
+.hero-location{font-size:0.9rem;color:var(--gold-dark);margin-bottom:2.5rem;font-weight:300}
+.hero-buttons{display:flex;gap:1.2rem;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:0.5rem;padding:0.9rem 2.2rem;border-radius:50px;font-family:var(--font-body);font-size:0.95rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:all var(--transition);border:none}
+.btn-primary{background:var(--gold);color:var(--black);box-shadow:0 4px 25px rgba(201,168,76,0.3)}
+.btn-primary:hover{background:var(--gold-light);color:var(--black);transform:translateY(-2px);box-shadow:0 8px 35px rgba(201,168,76,0.4)}
+.btn-outline{background:transparent;color:var(--gold);border:2px solid var(--gold)}
+.btn-outline:hover{background:var(--gold);color:var(--black);transform:translateY(-2px)}
+.hero-scroll{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);animation:bounce 2s infinite}
+.hero-scroll span{display:block;width:24px;height:40px;border:2px solid var(--gold);border-radius:12px;position:relative}
+.hero-scroll span::after{content:'';position:absolute;top:6px;left:50%;transform:translateX(-50%);width:4px;height:8px;background:var(--gold);border-radius:2px;animation:scroll-dot 2s infinite}
+@keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(10px)}}
+@keyframes scroll-dot{0%{opacity:1;top:6px}100%{opacity:0;top:20px}}
+
+/* =================== SECTIONS =================== */
+.section{padding:var(--section-padding);position:relative}
+.section-dark{background:var(--dark)}
+.section-title{font-size:clamp(2rem,5vw,3rem);text-align:center;color:var(--gold);margin-bottom:0.5rem}
+.section-divider{display:flex;align-items:center;justify-content:center;gap:0.8rem;margin-bottom:3rem;color:var(--gold-dark);font-size:0.8rem;letter-spacing:3px}
+.section-divider::before,.section-divider::after{content:'';width:60px;height:1px;background:linear-gradient(to right,transparent,var(--gold-dark))}
+.section-divider::after{background:linear-gradient(to left,transparent,var(--gold-dark))}
+
+/* =================== CHI SIAMO =================== */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;margin-top:2rem}
+.about-text p{color:var(--white-dim);margin-bottom:1.2rem;font-size:1.05rem}
+.about-text p:first-of-type::first-letter{font-family:var(--font-display);font-size:3.5rem;float:left;line-height:1;margin-right:0.5rem;color:var(--gold);font-weight:700}
+.about-highlights{display:flex;flex-direction:column;gap:1.5rem}
+.about-highlight{display:flex;align-items:flex-start;gap:1rem;padding:1.5rem;background:var(--dark-card);border-radius:var(--radius);border:1px solid rgba(201,168,76,0.1);transition:all var(--transition)}
+.about-highlight:hover{border-color:var(--gold-dark);transform:translateX(5px)}
+.about-highlight-icon{font-size:2rem;flex-shrink:0}
+.about-highlight h4{color:var(--gold);margin-bottom:0.3rem;font-size:1rem}
+.about-highlight p{color:var(--white-dim);font-size:0.9rem}
+.google-badge{display:inline-flex;align-items:center;gap:0.8rem;background:var(--dark-card);padding:1rem 1.5rem;border-radius:var(--radius);border:1px solid rgba(201,168,76,0.2);margin-top:1.5rem}
+.google-badge-stars{color:#fbbc04;font-size:1.3rem;letter-spacing:2px}
+.google-badge-score{font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--gold)}
+.google-badge-text{color:var(--white-dim);font-size:0.85rem}
+@media(max-width:768px){
+  .about-grid{grid-template-columns:1fr;gap:2rem}
+}
+
+/* =================== MENÙ =================== */
+.menu-nav{display:flex;justify-content:center;flex-wrap:wrap;gap:0.8rem;margin-bottom:3rem}
+.menu-nav-btn{padding:0.6rem 1.5rem;border:1px solid var(--gold-dark);background:transparent;color:var(--gold);font-family:var(--font-body);font-size:0.85rem;letter-spacing:1px;text-transform:uppercase;border-radius:50px;cursor:pointer;transition:all var(--transition)}
+.menu-nav-btn.active,.menu-nav-btn:hover{background:var(--gold);color:var(--black)}
+.menu-section{margin-bottom:3rem}
+.menu-section-title{font-family:var(--font-display);font-size:1.8rem;color:var(--gold);text-align:center;margin-bottom:0.3rem}
+.menu-stars{text-align:center;color:var(--gold-dark);letter-spacing:4px;margin-bottom:2rem;font-size:0.9rem}
+.menu-items{max-width:800px;margin:0 auto}
+.menu-item{padding:1.2rem 0;border-bottom:1px solid rgba(201,168,76,0.1);display:flex;justify-content:space-between;align-items:flex-start;gap:1rem}
+.menu-item:last-child{border-bottom:none}
+.menu-item-name{font-family:var(--font-display);font-size:1.1rem;color:var(--white);font-weight:400}
+.menu-item-desc{color:var(--white-dim);font-size:0.9rem;margin-top:0.3rem;font-style:italic;line-height:1.5}
+.menu-item-price{font-family:var(--font-display);color:var(--gold);font-size:1.1rem;white-space:nowrap;font-weight:700}
+.menu-degustazione{max-width:700px;margin:2rem auto 0;padding:2rem;background:linear-gradient(135deg,rgba(201,168,76,0.08),rgba(201,168,76,0.03));border:1px solid var(--gold-dark);border-radius:var(--radius);text-align:center}
+.menu-degustazione h3{font-family:var(--font-display);color:var(--gold);font-size:1.5rem;margin-bottom:0.5rem}
+.menu-degustazione .price{font-size:2rem;color:var(--gold);font-weight:700;font-family:var(--font-display);margin-bottom:0.5rem}
+.menu-degustazione p{color:var(--white-dim);font-size:0.95rem}
+.menu-pizza-note{max-width:700px;margin:2rem auto 0;padding:1.5rem;background:var(--dark-card);border-left:3px solid var(--gold);border-radius:0 var(--radius) var(--radius) 0;text-align:left}
+.menu-pizza-note p{color:var(--white-dim);font-size:0.95rem}
+.menu-pizza-note strong{color:var(--gold)}
+
+/* =================== SERVIZI =================== */
+.services-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1.5rem;margin-top:2rem}
+.service-card{background:var(--dark-card);border:1px solid rgba(201,168,76,0.08);border-radius:var(--radius);padding:2rem 1.5rem;text-align:center;transition:all var(--transition)}
+.service-card:hover{border-color:var(--gold-dark);transform:translateY(-5px);box-shadow:0 10px 30px rgba(0,0,0,0.3)}
+.service-icon{font-size:2.5rem;margin-bottom:1rem}
+.service-card h4{font-family:var(--font-display);color:var(--gold);margin-bottom:0.5rem;font-size:1.1rem}
+.service-card p{color:var(--white-dim);font-size:0.9rem}
+
+/* =================== ORARI =================== */
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;margin-top:2rem}
+.info-card{background:var(--dark-card);border:1px solid rgba(201,168,76,0.1);border-radius:var(--radius);padding:2rem;transition:border-color var(--transition)}
+.info-card:hover{border-color:var(--gold-dark)}
+.info-card h3{font-family:var(--font-display);color:var(--gold);margin-bottom:1.5rem;font-size:1.3rem;display:flex;align-items:center;gap:0.5rem}
+.hours-table{width:100%}
+.hours-table tr{border-bottom:1px solid rgba(201,168,76,0.08)}
+.hours-table td{padding:0.7rem 0;font-size:0.95rem}
+.hours-table td:first-child{color:var(--white);font-weight:400}
+.hours-table td:last-child{text-align:right;color:var(--white-dim)}
+.hours-table tr.closed td{color:var(--gold-dark);font-style:italic}
+.info-detail{display:flex;align-items:flex-start;gap:1rem;margin-bottom:1.2rem}
+.info-detail-icon{font-size:1.3rem;flex-shrink:0;margin-top:0.2rem}
+.info-detail p{color:var(--white-dim);font-size:0.95rem}
+.info-detail a{color:var(--gold)}
+.info-map{margin-top:2rem;border-radius:var(--radius);overflow:hidden;border:1px solid rgba(201,168,76,0.1)}
+.info-map iframe{width:100%;height:300px;border:none;filter:grayscale(0.5) contrast(1.1)}
+@media(max-width:768px){
+  .info-grid{grid-template-columns:1fr;gap:2rem}
+}
+
+/* =================== RECENSIONI =================== */
+.reviews-container{max-width:900px;margin:0 auto;position:relative}
+.reviews-track{overflow:hidden}
+.reviews-slides{display:flex;transition:transform 0.5s ease}
+.review-card{min-width:100%;padding:2rem;text-align:center}
+.review-quote{font-family:var(--font-display);font-style:italic;font-size:clamp(1.1rem,2.5vw,1.35rem);color:var(--white);line-height:1.8;margin-bottom:1.5rem;position:relative;padding:0 2rem}
+.review-quote::before{content:'\201C';position:absolute;top:-0.5rem;left:0;font-size:4rem;color:var(--gold-dark);font-family:var(--font-display);line-height:1;opacity:0.5}
+.review-stars{color:#fbbc04;font-size:1.2rem;letter-spacing:3px;margin-bottom:0.8rem}
+.review-author{color:var(--gold);font-size:1rem;font-weight:700;letter-spacing:1px}
+.review-source{color:var(--white-dim);font-size:0.8rem;margin-top:0.3rem}
+.reviews-dots{display:flex;justify-content:center;gap:0.8rem;margin-top:1.5rem}
+.reviews-dot{width:10px;height:10px;border-radius:50%;background:rgba(201,168,76,0.3);cursor:pointer;transition:all var(--transition);border:none}
+.reviews-dot.active{background:var(--gold);transform:scale(1.3)}
+.reviews-nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(201,168,76,0.1);border:1px solid var(--gold-dark);color:var(--gold);width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:1.2rem;transition:all var(--transition)}
+.reviews-nav:hover{background:var(--gold);color:var(--black)}
+.reviews-prev{left:-1.5rem}
+.reviews-next{right:-1.5rem}
+@media(max-width:768px){
+  .reviews-prev{left:0}
+  .reviews-next{right:0}
+  .review-card{padding:2rem 3rem}
+}
+
+/* =================== CONTATTI =================== */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:2rem}
+.contact-form{background:var(--dark-card);border:1px solid rgba(201,168,76,0.1);border-radius:var(--radius);padding:2.5rem}
+.contact-form h3{font-family:var(--font-display);color:var(--gold);margin-bottom:1.5rem;font-size:1.3rem}
+.form-group{margin-bottom:1.2rem}
+.form-group label{display:block;color:var(--white-dim);font-size:0.85rem;margin-bottom:0.4rem;letter-spacing:0.5px;text-transform:uppercase}
+.form-group input,.form-group textarea,.form-group select{width:100%;padding:0.9rem 1rem;background:rgba(255,255,255,0.05);border:1px solid rgba(201,168,76,0.15);border-radius:8px;color:var(--white);font-family:var(--font-body);font-size:0.95rem;transition:border-color var(--transition);outline:none}
+.form-group select{color-scheme:dark;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23c9a84c' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center;padding-right:2.5rem}
+.form-group select option{background:var(--dark-card);color:var(--white)}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--gold)}
+.form-group textarea{resize:vertical;min-height:100px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.contact-info-side{display:flex;flex-direction:column;gap:1.5rem}
+.contact-cta{background:linear-gradient(135deg,rgba(201,168,76,0.1),rgba(201,168,76,0.03));border:1px solid var(--gold-dark);border-radius:var(--radius);padding:2rem;text-align:center}
+.contact-cta h3{font-family:var(--font-display);color:var(--gold);margin-bottom:0.5rem;font-size:1.3rem}
+.contact-cta p{color:var(--white-dim);margin-bottom:1.5rem;font-size:0.95rem}
+.social-links{display:flex;gap:1rem;justify-content:center;margin-top:1.5rem}
+.social-link{width:50px;height:50px;border-radius:50%;border:1px solid var(--gold-dark);display:flex;align-items:center;justify-content:center;transition:all var(--transition);font-size:1.2rem}
+.social-link:hover{background:var(--gold);border-color:var(--gold);transform:translateY(-3px)}
+.social-link:hover svg{fill:var(--black)}
+.social-link svg{width:22px;height:22px;fill:var(--gold);transition:fill var(--transition)}
+@media(max-width:768px){
+  .contact-grid{grid-template-columns:1fr;gap:2rem}
+  .form-row{grid-template-columns:1fr}
+}
+
+/* =================== FOOTER =================== */
+.footer{background:var(--dark);padding:3rem 1.5rem 1.5rem;border-top:1px solid rgba(201,168,76,0.1)}
+.footer-content{max-width:var(--max-width);margin:0 auto;display:grid;grid-template-columns:1fr 1fr 1fr;gap:2rem;align-items:start;padding-bottom:2rem;border-bottom:1px solid rgba(201,168,76,0.08)}
+.footer-brand{font-family:var(--font-display);font-style:italic;font-size:2rem;color:var(--gold);margin-bottom:0.5rem}
+.footer-tagline{color:var(--white-dim);font-size:0.85rem}
+.footer h4{color:var(--gold);font-family:var(--font-display);font-size:1rem;margin-bottom:1rem}
+.footer-links{list-style:none}
+.footer-links li{margin-bottom:0.5rem}
+.footer-links a{color:var(--white-dim);font-size:0.9rem}
+.footer-links a:hover{color:var(--gold)}
+.payment-methods{display:flex;flex-wrap:wrap;gap:0.8rem;margin-top:0.5rem}
+.payment-badge{padding:0.4rem 0.8rem;background:rgba(255,255,255,0.05);border:1px solid rgba(201,168,76,0.1);border-radius:6px;font-size:0.8rem;color:var(--white-dim)}
+.footer-bottom{max-width:var(--max-width);margin:0 auto;padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-copy{color:var(--white-dim);font-size:0.85rem}
+.footer-social{display:flex;gap:1rem}
+.footer-social a{color:var(--white-dim);transition:color var(--transition)}
+.footer-social a:hover{color:var(--gold)}
+.footer-social svg{width:18px;height:18px;fill:currentColor}
+@media(max-width:768px){
+  .footer-content{grid-template-columns:1fr;text-align:center}
+  .payment-methods{justify-content:center}
+  .footer-bottom{justify-content:center;text-align:center}
+  .footer-social{justify-content:center}
+}
+
+/* =================== REVEAL ANIMATIONS =================== */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity 0.8s ease,transform 0.8s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-left{opacity:0;transform:translateX(-30px);transition:opacity 0.8s ease,transform 0.8s ease}
+.reveal-left.visible{opacity:1;transform:translateX(0)}
+.reveal-right{opacity:0;transform:translateX(30px);transition:opacity 0.8s ease,transform 0.8s ease}
+.reveal-right.visible{opacity:1;transform:translateX(0)}
+
+/* =================== MISC =================== */
+::selection{background:var(--gold);color:var(--black)}
+::-webkit-scrollbar{width:8px}
+::-webkit-scrollbar-track{background:var(--black)}
+::-webkit-scrollbar-thumb{background:var(--gold-dark);border-radius:4px}
+::-webkit-scrollbar-thumb:hover{background:var(--gold)}
+</style>
+</head>
+<body>
+
+<!-- =================== NAVBAR =================== -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <a href="#hero" class="navbar-brand">Matisse</a>
+    <button class="navbar-toggle" id="navToggle" aria-label="Menu di navigazione" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#chi-siamo">Chi siamo</a></li>
+      <li><a href="#menu">Menù</a></li>
+      <li><a href="#servizi">Servizi</a></li>
+      <li><a href="#orari">Orari</a></li>
+      <li><a href="#recensioni">Recensioni</a></li>
+      <li><a href="#contatti">Contatti</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- =================== HERO =================== -->
+<section class="hero" id="hero">
+  <div class="hero-pattern"></div>
+  <div class="hero-content">
+    <div class="hero-cocktail">🍸</div>
+    <h1>Matisse</h1>
+    <p class="hero-subtitle">Food &amp; Drinks · Disco Club · Bar · Ristorante · Pizzeria</p>
+    <p class="hero-location">📍 Genzano di Lucania (PZ) — Basilicata</p>
+    <div class="hero-buttons">
+      <a href="tel:3925018982" class="btn btn-primary">📞 Prenota un tavolo</a>
+      <a href="#menu" class="btn btn-outline">Scopri il Menù</a>
+    </div>
+  </div>
+  <div class="hero-scroll"><span></span></div>
+</section>
+
+<!-- =================== CHI SIAMO =================== -->
+<section class="section section-dark" id="chi-siamo">
+  <div class="container">
+    <h2 class="section-title reveal">Chi Siamo</h2>
+    <div class="section-divider reveal"><span>★ ★ ★ ★ ★</span></div>
+    <div class="about-grid">
+      <div class="about-text reveal-left">
+        <p>Matisse non è solo un ristorante: è un luogo dove la passione per la cucina si intreccia con il calore dell'ospitalità lucana. Situato lungo la Strada Provinciale 22 di Genzano di Lucania, il nostro locale nasce dal sogno di una famiglia che ha fatto dell'accoglienza la propria vocazione.</p>
+        <p>Siamo un ristorante a conduzione familiare, guidato con dedizione e orgoglio da donne che portano avanti una tradizione culinaria autentica. Ogni piatto racconta una storia: quella della nostra terra, dei suoi ingredienti genuini e delle ricette tramandate di generazione in generazione.</p>
+        <p>Qui troverete un'atmosfera accogliente e tranquilla, ideale per una cena romantica, un pranzo in famiglia o una serata tra amici. Perché da Matisse, ogni momento a tavola diventa un ricordo speciale.</p>
+        <div class="google-badge">
+          <div>
+            <div class="google-badge-stars">★★★★★</div>
+          </div>
+          <div>
+            <div class="google-badge-score">4,6 / 5</div>
+            <div class="google-badge-text">su Google · 120 recensioni</div>
+          </div>
+        </div>
+      </div>
+      <div class="about-highlights reveal-right">
+        <div class="about-highlight">
+          <div class="about-highlight-icon">🍝</div>
+          <div>
+            <h4>Cucina Italiana Autentica</h4>
+            <p>Piatti preparati con ingredienti freschi e locali, seguendo le ricette della tradizione italiana e lucana.</p>
+          </div>
+        </div>
+        <div class="about-highlight">
+          <div class="about-highlight-icon">🍕</div>
+          <div>
+            <h4>Pizza Artigianale</h4>
+            <p>Impasto perfetto e digeribile, preparato con maestria dalla pizzaiola di casa — figlia del proprietario.</p>
+          </div>
+        </div>
+        <div class="about-highlight">
+          <div class="about-highlight-icon">🏠</div>
+          <div>
+            <h4>Accoglienza Familiare</h4>
+            <p>Un locale a conduzione familiare, di proprietà di donne, dove ogni ospite si sente a casa.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== MENÙ =================== -->
+<section class="section" id="menu">
+  <div class="container">
+    <h2 class="section-title reveal">Il Nostro Menù</h2>
+    <div class="section-divider reveal"><span>★ ★ ★ ★ ★</span></div>
+
+    <!-- Antipasti -->
+    <div class="menu-section reveal">
+      <h3 class="menu-section-title">Antipasti</h3>
+      <div class="menu-stars">★ ★ ★ ★ ★</div>
+      <div class="menu-items">
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Cotton Candy e Bollicine</div>
+            <div class="menu-item-desc">Un inizio dolce e sorprendente, dove lo zucchero filato incontra le bollicine in un'esperienza sensoriale unica</div>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Delizie del Mare</div>
+            <div class="menu-item-desc">Sfera di seppia e polvere di paprika, mousse di patata viola, polpo arrosto, chips, tartare di tonno rosso, burrata pugliese e sale nero di Cipro</div>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Soutè di Cozze</div>
+            <div class="menu-item-desc">Cozze fresche saltate con aglio, prezzemolo e un tocco di vino bianco</div>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Tagliere di Salumi e Formaggi</div>
+            <div class="menu-item-desc">Bresaola della Valtellina su cialda di parmigiano, crudo di Parma, salame nostrano, bufalina campana, gheriglio di noce farcita e Grana Padano DOP</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Primi -->
+    <div class="menu-section reveal">
+      <h3 class="menu-section-title">Primi Piatti</h3>
+      <div class="menu-stars">★ ★ ★ ★ ★</div>
+      <div class="menu-items">
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Mezze Lune ai Funghi Porcini</div>
+            <div class="menu-item-desc">Pasta fresca ripiena di funghi porcini, servita con salsa vellutata e lamelle di mandorle tostate</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Secondi -->
+    <div class="menu-section reveal">
+      <h3 class="menu-section-title">Secondi Piatti</h3>
+      <div class="menu-stars">★ ★ ★ ★ ★</div>
+      <div class="menu-items">
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Noce di Vitello Arrosto</div>
+            <div class="menu-item-desc">Alle erbe aromatiche, dadolata di verdure di stagione e misticanza fresca</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dessert -->
+    <div class="menu-section reveal">
+      <h3 class="menu-section-title">Dessert</h3>
+      <div class="menu-stars">★ ★ ★ ★ ★</div>
+      <div class="menu-items">
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Coppetta della Fortuna</div>
+            <div class="menu-item-desc">Un dessert sorpresa che vi conquisterà al primo cucchiaio</div>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Fantasia di Frutta</div>
+            <div class="menu-item-desc">Selezione di frutta fresca di stagione, presentata con estro e creatività</div>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Dessert della Tradizione</div>
+            <div class="menu-item-desc">Il dolce della casa, preparato seguendo le ricette di una volta</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pizzeria -->
+    <div class="menu-section reveal">
+      <h3 class="menu-section-title">Pizzeria</h3>
+      <div class="menu-stars">★ ★ ★ ★ ★</div>
+      <div class="menu-pizza-note">
+        <p>🍕 Le nostre pizze sono preparate con <strong>impasto artigianale</strong>, lavorato con cura per garantire una pizza <strong>perfetta e digeribilissima</strong>. Ogni pizza è un capolavoro di semplicità e sapore, realizzato dalla nostra pizzaiola di famiglia.</p>
+      </div>
+    </div>
+
+    <!-- Menù Degustazione -->
+    <div class="menu-degustazione reveal">
+      <h3>Menù Degustazione</h3>
+      <div class="price">€ 50,00</div>
+      <p>a persona — acqua, Coca Cola, Fanta, vino rosso e bianco inclusi</p>
+      <p style="margin-top:0.8rem;font-size:0.85rem;color:var(--gold-dark)">Un percorso gastronomico completo attraverso i sapori del Matisse</p>
+    </div>
+  </div>
+</section>
+
+<!-- =================== SERVIZI =================== -->
+<section class="section section-dark" id="servizi">
+  <div class="container">
+    <h2 class="section-title reveal">I Nostri Servizi</h2>
+    <div class="section-divider reveal"><span>★ ★ ★ ★ ★</span></div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-icon">🎵</div>
+        <h4>Musica dal Vivo</h4>
+        <p>Serate con musica live per rendere ogni cena un'esperienza indimenticabile.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">🍷</div>
+        <h4>Carta dei Vini</h4>
+        <p>Una selezione curata di vini locali e nazionali per accompagnare ogni piatto.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">🍰</div>
+        <h4>Ottimi Dessert</h4>
+        <p>Dolci artigianali preparati con amore, per chiudere in dolcezza ogni pasto.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">☕</div>
+        <h4>Ottimo Caffè</h4>
+        <p>Miscele pregiate per un espresso perfetto, come da tradizione italiana.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">🍺</div>
+        <h4>Selezione di Birre</h4>
+        <p>Vasta scelta di birre artigianali e classiche, per tutti i gusti.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">🌿</div>
+        <h4>Opzioni Vegane &amp; Vegetariane</h4>
+        <p>Piatti dedicati a chi sceglie un'alimentazione vegetale, senza rinunciare al gusto.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">👨‍👩‍👧</div>
+        <h4>Adatto alle Famiglie</h4>
+        <p>Menu bimbi, seggioloni e un ambiente accogliente per tutta la famiglia.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">🐕</div>
+        <h4>Cani Ammessi</h4>
+        <p>I vostri amici a quattro zampe sono i benvenuti nel nostro locale.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">♿</div>
+        <h4>Accessibile</h4>
+        <p>Struttura accessibile in sedia a rotelle, per garantire comfort a tutti.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">🅿️</div>
+        <h4>Parcheggio Gratuito</h4>
+        <p>Ampio parcheggio gratuito a disposizione di tutti i nostri clienti.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== ORARI =================== -->
+<section class="section" id="orari">
+  <div class="container">
+    <h2 class="section-title reveal">Orari &amp; Informazioni</h2>
+    <div class="section-divider reveal"><span>★ ★ ★ ★ ★</span></div>
+    <div class="info-grid">
+      <div class="info-card reveal-left">
+        <h3>🕐 Orari di Apertura</h3>
+        <table class="hours-table">
+          <tr><td>Martedì</td><td>19:00 – 23:00</td></tr>
+          <tr class="closed"><td>Mercoledì</td><td>Chiuso</td></tr>
+          <tr><td>Giovedì</td><td>19:00 – 23:00</td></tr>
+          <tr><td>Venerdì</td><td>19:00 – 23:00</td></tr>
+          <tr><td>Sabato</td><td>19:00 – 23:00</td></tr>
+          <tr><td>Domenica</td><td>19:00 – 23:00</td></tr>
+          <tr class="closed"><td>Lunedì</td><td>Chiuso</td></tr>
+        </table>
+      </div>
+      <div class="reveal-right">
+        <div class="info-card" style="margin-bottom:1.5rem">
+          <h3>📍 Come Raggiungerci</h3>
+          <div class="info-detail">
+            <div class="info-detail-icon">🏠</div>
+            <p>Strada Provinciale 22 di Genzano<br>85013 Genzano di Lucania (PZ)<br>Basilicata, Italia</p>
+          </div>
+          <div class="info-detail">
+            <div class="info-detail-icon">📞</div>
+            <p><a href="tel:3925018982">392 501 8982</a></p>
+          </div>
+          <div class="info-detail">
+            <div class="info-detail-icon">💰</div>
+            <p>Fascia di prezzo: <strong style="color:var(--gold)">10 – 30 €</strong> a persona</p>
+          </div>
+        </div>
+        <div class="info-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3050!2d16.0319!3d40.8492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13382d66d5c3e6e7%3A0x2dfed52519b81f32!2sMatisse!5e0!3m2!1sit!2sit!4v1694000000000!5m2!1sit!2sit" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mappa Matisse Ristorante"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== RECENSIONI =================== -->
+<section class="section section-dark" id="recensioni">
+  <div class="container">
+    <h2 class="section-title reveal">Cosa Dicono di Noi</h2>
+    <div class="section-divider reveal"><span>★ ★ ★ ★ ★</span></div>
+    <div class="reviews-container reveal">
+      <div class="reviews-track">
+        <div class="reviews-slides" id="reviewsSlides">
+          <div class="review-card">
+            <div class="review-stars">★ ★ ★ ★ ★</div>
+            <div class="review-quote">Ottima la pizza, impasto perfetto, digeribilissima, buoni i dolci. Ottimo il servizio, 10 e lode.</div>
+            <div class="review-author">— Pasquale C.</div>
+            <div class="review-source">Recensione Google</div>
+          </div>
+          <div class="review-card">
+            <div class="review-stars">★ ★ ★ ★ ★</div>
+            <div class="review-quote">Personale gentile e premuroso, pizza buona e servita in tempi record, ambiente carino.</div>
+            <div class="review-author">— Daniela</div>
+            <div class="review-source">Recensione Google</div>
+          </div>
+          <div class="review-card">
+            <div class="review-stars">★ ★ ★ ★ ★</div>
+            <div class="review-quote">Non ho ordinato pizza, ma un'ottima tagliata di manzo e verdure alla griglia. Tutto eccellente, consigliato!</div>
+            <div class="review-author">— Ospite</div>
+            <div class="review-source">Recensione Google</div>
+          </div>
+        </div>
+      </div>
+      <button class="reviews-nav reviews-prev" id="reviewPrev" aria-label="Recensione precedente">&#8249;</button>
+      <button class="reviews-nav reviews-next" id="reviewNext" aria-label="Recensione successiva">&#8250;</button>
+      <div class="reviews-dots" id="reviewsDots">
+        <button class="reviews-dot active" data-index="0" aria-label="Recensione 1"></button>
+        <button class="reviews-dot" data-index="1" aria-label="Recensione 2"></button>
+        <button class="reviews-dot" data-index="2" aria-label="Recensione 3"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== CONTATTI =================== -->
+<section class="section" id="contatti">
+  <div class="container">
+    <h2 class="section-title reveal">Contatti &amp; Prenotazioni</h2>
+    <div class="section-divider reveal"><span>★ ★ ★ ★ ★</span></div>
+    <div class="contact-grid">
+      <div class="contact-form reveal-left">
+        <h3>Prenota il Tuo Tavolo</h3>
+        <form id="contactForm" onsubmit="handleFormSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nome">Nome *</label>
+              <input type="text" id="nome" name="nome" required placeholder="Il tuo nome">
+            </div>
+            <div class="form-group">
+              <label for="telefono">Telefono *</label>
+              <input type="tel" id="telefono" name="telefono" required placeholder="Il tuo numero">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="data">Data *</label>
+              <input type="date" id="data" name="data" required>
+            </div>
+            <div class="form-group">
+              <label for="persone">Numero Persone *</label>
+              <select id="persone" name="persone" required>
+                <option value="">Seleziona</option>
+                <option value="1">1 persona</option>
+                <option value="2">2 persone</option>
+                <option value="3">3 persone</option>
+                <option value="4">4 persone</option>
+                <option value="5">5 persone</option>
+                <option value="6">6 persone</option>
+                <option value="7">7 persone</option>
+                <option value="8">8 persone</option>
+                <option value="9">9 persone</option>
+                <option value="10+">10+ persone</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="messaggio">Messaggio</label>
+            <textarea id="messaggio" name="messaggio" placeholder="Allergie, preferenze, richieste speciali..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:0.5rem">Invia Prenotazione</button>
+        </form>
+        <div id="formSuccess" style="display:none;text-align:center;padding:2rem">
+          <div style="font-size:3rem;margin-bottom:1rem">✅</div>
+          <h4 style="color:var(--gold);margin-bottom:0.5rem;font-family:var(--font-display)">Richiesta Inviata!</h4>
+          <p style="color:var(--white-dim);font-size:0.95rem">Ti ricontatteremo al più presto per confermare la prenotazione.</p>
+        </div>
+      </div>
+      <div class="contact-info-side reveal-right">
+        <div class="contact-cta">
+          <h3>Preferisci Chiamare?</h3>
+          <p>Per prenotazioni immediate o informazioni, chiamaci direttamente:</p>
+          <a href="tel:3925018982" class="btn btn-primary">📞 Chiama Ora</a>
+          <div class="social-links" style="margin-top:2rem">
+            <a href="https://www.facebook.com/matisseristorantepizzeria/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
+              <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/matisseristorantepizzeria/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="info-card">
+          <h3>📌 Info Rapide</h3>
+          <div class="info-detail">
+            <div class="info-detail-icon">📍</div>
+            <p>Strada Provinciale 22 di Genzano<br>85013 Genzano di Lucania (PZ)</p>
+          </div>
+          <div class="info-detail">
+            <div class="info-detail-icon">🕐</div>
+            <p>Mar–Gio–Ven–Sab–Dom: 19:00 – 23:00<br>Lunedì e Mercoledì: Chiuso</p>
+          </div>
+          <div class="info-detail">
+            <div class="info-detail-icon">💰</div>
+            <p>10 – 30 € a persona</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== FOOTER =================== -->
+<footer class="footer">
+  <div class="footer-content">
+    <div>
+      <div class="footer-brand">Matisse</div>
+      <p class="footer-tagline">Food &amp; Drinks · Disco Club<br>Bar · Ristorante · Pizzeria</p>
+    </div>
+    <div>
+      <h4>Navigazione</h4>
+      <ul class="footer-links">
+        <li><a href="#chi-siamo">Chi siamo</a></li>
+        <li><a href="#menu">Menù</a></li>
+        <li><a href="#servizi">Servizi</a></li>
+        <li><a href="#orari">Orari</a></li>
+        <li><a href="#recensioni">Recensioni</a></li>
+        <li><a href="#contatti">Contatti</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Metodi di Pagamento</h4>
+      <div class="payment-methods">
+        <span class="payment-badge">💳 Carte di Credito</span>
+        <span class="payment-badge">💳 Carte di Debito</span>
+        <span class="payment-badge">📱 NFC</span>
+        <span class="payment-badge">📝 Assegni</span>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">&copy; 2024 Matisse — Ristorante · Pizzeria · Bar. Tutti i diritti riservati.</p>
+    <div class="footer-social">
+      <a href="https://www.facebook.com/matisseristorantepizzeria/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+        <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/matisseristorantepizzeria/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* =================== NAVBAR SCROLL =================== */
+(function(){
+  const navbar=document.getElementById('navbar');
+  const navToggle=document.getElementById('navToggle');
+  const navLinks=document.getElementById('navLinks');
+
+  window.addEventListener('scroll',function(){
+    navbar.classList.toggle('scrolled',window.scrollY>50);
+  },{passive:true});
+
+  navToggle.addEventListener('click',function(){
+    navLinks.classList.toggle('open');
+    navToggle.classList.toggle('active');
+    navToggle.setAttribute('aria-expanded',navLinks.classList.contains('open'));
+  });
+
+  navLinks.querySelectorAll('a').forEach(function(link){
+    link.addEventListener('click',function(){
+      navLinks.classList.remove('open');
+      navToggle.classList.remove('active');
+      navToggle.setAttribute('aria-expanded','false');
+    });
+  });
+})();
+
+/* =================== SCROLL REVEAL =================== */
+(function(){
+  var reveals=document.querySelectorAll('.reveal,.reveal-left,.reveal-right');
+  if(!('IntersectionObserver' in window)){
+    reveals.forEach(function(el){el.classList.add('visible');});
+    return;
+  }
+  var observer=new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  },{threshold:0.15,rootMargin:'0px 0px -40px 0px'});
+  reveals.forEach(function(el){observer.observe(el);});
+})();
+
+/* =================== REVIEWS CAROUSEL =================== */
+(function(){
+  var slides=document.getElementById('reviewsSlides');
+  var dots=document.querySelectorAll('.reviews-dot');
+  var prevBtn=document.getElementById('reviewPrev');
+  var nextBtn=document.getElementById('reviewNext');
+  var current=0;
+  var total=dots.length;
+  var autoplayInterval;
+
+  function goTo(index){
+    if(index<0)index=total-1;
+    if(index>=total)index=0;
+    current=index;
+    slides.style.transform='translateX(-'+current*100+'%)';
+    dots.forEach(function(d,i){d.classList.toggle('active',i===current);});
+  }
+
+  function startAutoplay(){
+    autoplayInterval=setInterval(function(){goTo(current+1);},5000);
+  }
+
+  function resetAutoplay(){
+    clearInterval(autoplayInterval);
+    startAutoplay();
+  }
+
+  prevBtn.addEventListener('click',function(){goTo(current-1);resetAutoplay();});
+  nextBtn.addEventListener('click',function(){goTo(current+1);resetAutoplay();});
+  dots.forEach(function(dot){
+    dot.addEventListener('click',function(){goTo(parseInt(this.dataset.index));resetAutoplay();});
+  });
+
+  /* Swipe support */
+  var touchStartX=0;
+  slides.addEventListener('touchstart',function(e){touchStartX=e.changedTouches[0].screenX;},{passive:true});
+  slides.addEventListener('touchend',function(e){
+    var diff=touchStartX-e.changedTouches[0].screenX;
+    if(Math.abs(diff)>50){
+      if(diff>0)goTo(current+1);
+      else goTo(current-1);
+      resetAutoplay();
+    }
+  },{passive:true});
+
+  startAutoplay();
+})();
+
+/* =================== FORM HANDLER =================== */
+function handleFormSubmit(e){
+  e.preventDefault();
+  var form=document.getElementById('contactForm');
+  var success=document.getElementById('formSuccess');
+  form.style.display='none';
+  success.style.display='block';
+  setTimeout(function(){
+    form.reset();
+    form.style.display='block';
+    success.style.display='none';
+  },4000);
+}
+
+/* =================== SET MIN DATE =================== */
+(function(){
+  var dateInput=document.getElementById('data');
+  if(dateInput){
+    var today=new Date().toISOString().split('T')[0];
+    dateInput.setAttribute('min',today);
+  }
+})();
+
+/* =================== SMOOTH SCROLL POLYFILL =================== */
+document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+  anchor.addEventListener('click',function(e){
+    var target=document.querySelector(this.getAttribute('href'));
+    if(target){
+      e.preventDefault();
+      var offset=80;
+      var top=target.getBoundingClientRect().top+window.pageYOffset-offset;
+      window.scrollTo({top:top,behavior:'smooth'});
+    }
+  });
+});
+</script>
+</body>
+</html>
